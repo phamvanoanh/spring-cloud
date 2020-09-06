@@ -1,0 +1,24 @@
+server:
+  port: ${PORT:8761}
+
+    #server:
+    #  port: 8089
+    #spring:
+    #  application:
+    #    name: first-service
+    #logging:
+    #  pattern:
+    #    console: "%d{HH:m:ss.SSS} %-5level %logger{36} -%msg%n"
+    #    file: "%d{HH:m:ss.SSS} [%thread] %-5level %logger{36} -%msg%n"
+    #  level:
+    #     org.springframework.web: info
+    #  file: /var/log/app.log
+
+    #spring:
+    #  servlet:
+    #    multipart:
+    #      enabled: true
+    #      max-file-size: 5MB
+    #      max-request-size: 200KB
+        
+        
