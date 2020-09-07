@@ -15,7 +15,6 @@ public class DemoController {
     @RequestMapping(value = "/async", method = RequestMethod.GET)
     @ResponseBody
     public String callAsyncFunction() {
-
         ExecutorService executor = Executors.newCachedThreadPool();
         CompletableFuture.supplyAsync(() -> {
             try {
