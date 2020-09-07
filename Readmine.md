@@ -115,3 +115,67 @@ Phiên bản hiện tại của Eureka là **Dalston.SR4** trong release train l
 Việc cấu hình dành cho kỹ thuật clustering ở phía server hướng tới một điều là thiết lập URL của các discovery server khác sử dụng các thuộc tính **eureka.client.**. 
 Các server được lưạ chọn sẽ đăng ký bản thân nó với các server khác và việc lựa chọn này được coi là việc tạo ra cluster, như ví dụ trình bày ở dưới đây:
 ![sample](./image/example_eureka.png)
+
+## Building the example application
+
+Thêm lần lượt 3 profile cho eureka server nhưng lần lượt là peer1, peer2, peer3. rồi thực hiện khai báo như sau :
+Đối với peer1:
+
+```yaml
+spring:
+  profiles: peer1
+eureka:
+  instance:
+    hostname: peer1
+    metadataMap:
+      zone: zone1
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka/,http://localhost:8763/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+server:
+  port: ${PORT:8761}
+
+```
+
+Đối với peer2:
+
+```yaml
+spring:
+  profiles: peer2
+eureka:
+  instance:
+    hostname: peer2
+    metadataMap:
+      zone: zone2
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8763/eureka/,http://localhost:8761/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+server:
+  port: ${PORT:8762}
+
+```
+
+Đối với peer3:
+
+```yaml
+spring:
+  profiles: peer3
+eureka:
+  instance:
+    hostname: peer3
+    metadataMap:
+      zone: zone3
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+server:
+  port: ${PORT:8763}
+```
+
+Thứ tự của thuộc tính **defaultZone** sẽ quyết định connection đến server nào là mặc định, nếu không thể thiết lập kết nối tới server thứ 1 thì sẽ cố gắng kết nối tới server thứ 2. Và lời khuyên là sử dụng tham số **-Xmx192** khi chúng ta test ở locall. Nếu bạn không cung cấp giới hạn cho bộ nhớ spring application nó sẽ mất khoảng 350MB cho heap sau khi start xong và khoảng 600MB cho toàn bộ. Nếu máy bạn khoẻ thì đó không phải là vấn đề khi chạy nhiều instances trên local.
