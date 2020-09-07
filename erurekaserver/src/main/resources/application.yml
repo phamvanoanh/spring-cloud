@@ -1,7 +1,0 @@
-server:
-  port: ${PORT:8761}
-
-eureka:
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
