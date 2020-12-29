@@ -1,4 +1,4 @@
-package com.pavelsklenar;
+package com.edu;
 
 import org.springframework.integration.file.filters.AcceptOnceFileListFilter;
 

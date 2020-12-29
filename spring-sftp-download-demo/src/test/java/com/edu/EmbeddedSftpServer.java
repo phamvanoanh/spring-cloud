@@ -1,4 +1,4 @@
-package com.pavelsklenar;
+package com.edu;
 
 import java.io.IOException;
 import java.io.InputStream;
