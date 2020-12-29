@@ -1,6 +1,8 @@
 package com.pavelsklenar;
 
 import java.io.File;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -11,6 +13,7 @@ import org.springframework.integration.annotation.Poller;
 import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.integration.core.MessageSource;
 import org.springframework.integration.file.filters.AcceptOnceFileListFilter;
+import org.springframework.integration.file.filters.FileListFilter;
 import org.springframework.integration.file.remote.session.CachingSessionFactory;
 import org.springframework.integration.file.remote.session.SessionFactory;
 import org.springframework.integration.sftp.filters.SftpSimplePatternFileListFilter;
@@ -74,9 +77,16 @@ public class SftpConfigurationBasic {
         SftpInboundFileSynchronizer fileSynchronizer = new SftpInboundFileSynchronizer(sftpSessionFactory());
         fileSynchronizer.setDeleteRemoteFiles(true);
         fileSynchronizer.setRemoteDirectory(sftpRemoteDirectoryDownload);
-        fileSynchronizer
-                .setFilter(new SftpSimplePatternFileListFilter(sftpRemoteDirectoryDownloadFilter));
+//        fileSynchronizer
+//                .setFilter(new SftpSimplePatternFileListFilter(sftpRemoteDirectoryDownloadFilter));
+        fileSynchronizer.setFilter(getLsEntryFileListFilter());
         return fileSynchronizer;
+    }
+
+    private FileListFilter<LsEntry> getLsEntryFileListFilter() {
+        return lsEntries -> Arrays.stream(lsEntries)
+                .filter(p -> p.getFilename().endsWith(".csv"))
+                .collect(Collectors.toList());
     }
 
     @Bean
