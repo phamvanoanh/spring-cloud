@@ -3,6 +3,7 @@ package com.edu;
 import com.jcraft.jsch.ChannelSftp;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.expression.Expression;
 import org.springframework.integration.annotation.InboundChannelAdapter;
 import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.integration.annotation.Transformer;
@@ -63,7 +64,7 @@ public class SFTPStreamingConfiguration {
     @Bean
     public ExpressionEvaluatingRequestHandlerAdvice after() {
         ExpressionEvaluatingRequestHandlerAdvice advice = new ExpressionEvaluatingRequestHandlerAdvice();
-        advice.setOnSuccessExpression("@template.remove(headers['/file_remoteDirectory/'] + headers['/file_remoteFile'/])");
+        advice.setOnSuccessExpression("@template.remove(headers['file_remoteDirectory'] + headers['file_remoteFile'])");
         advice.setPropagateEvaluationFailures(true);
         return advice;
     }
