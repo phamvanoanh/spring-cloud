@@ -31,6 +31,10 @@ public class StudentReader extends FlatFileItemReader<StudentDto> {
                           "not Null", null, null, null, null, null, null, null};
 
         //https://super-csv.github.io/super-csv/xref-test/org/supercsv/example/Reading.html
+
+        // https://github.com/spring-projects/spring-batch/tree/master/spring-batch-samples
+
+        // https://github.com/spring-projects/spring-batch/tree/master/spring-batch-samples/src/main/java/org/springframework/batch/sample/common
         
     }
 
