@@ -34,7 +34,7 @@ public class Demo {
         log.info("==========Then apply function==========");
         final CompletableFuture<String> f1 = CompletableFuture.supplyAsync(() -> {
             try {
-                sleep(10000);
+                sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -43,8 +43,13 @@ public class Demo {
         final CompletableFuture<Integer> f2 = f1.thenApply(Integer::parseInt);
         final CompletableFuture<Integer> f3 = f2.thenApply(p -> p * 1000);
 
-        final Integer integer = f3.get();
-        log.info("result then apply==== {}", integer);
+        //final Integer integer = f3.get();
+        //log.info("result then apply==== {}", integer);
+
+        log.info("==========Then accept function==========");
+        f3.thenAcceptAsync((t) -> log.info("result accept {}", t), Executors.newFixedThreadPool(3));
+        log.info("Continuing");
+
 
 
     }
