@@ -31,3 +31,16 @@ Các phần lab:
 https://devsecops.job4u.io/en/landing-zone/landing-zone/
 https://github.com/nnthanh101?tab=repositories
 https://enterprise-cloud-native.workshop.aws/prerequisites.html
+
+week 4
+Lab:
+https://gitflow-codetools.workshop.aws/en/ 
+https://cicd-pipeline-cdk-ecs-fargate.workshop.aws/en/ 
+
+Git:
+https://github.com/aws-samples/amazon-ecs-fargate-cdk-cicd
+https://github.com/nnthanh101/DevAx/tree/main/ecs-fargate
+https://github.com/aws-samples/cdk-microservices-labs
+
+
+
