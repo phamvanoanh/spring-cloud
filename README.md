@@ -1,8 +1,5 @@
 # spring-cloud
 
-THẬN TRỌNG: Email này có nguồn gốc từ bên ngoài VPBank. Không nhấp chuột vào liên kết hoặc mở tệp đính kèm trừ khi bạn nhận ra người gửi và biết nội dung là an toàn.
-Dear các anh chị em VPBank,
-
 AWS gửi summary, tài liệu, tài khoản lab cho tuần thứ 3 nhé. 
 
 Slide trình bày:
