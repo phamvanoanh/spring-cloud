@@ -47,5 +47,7 @@ Team 23	https://dashboard.eventengine.run/login?hash=9c7b-072fa32dd4-0b
 
 ![image](https://user-images.githubusercontent.com/11538195/118352983-92ee3400-b58e-11eb-8e38-5521c89fd481.png)
 
+https://cicd-pipeline-cdk-ecs-fargate.workshop.aws/en/cdk.html
+
 
 
