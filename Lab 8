@@ -19,3 +19,10 @@ devax-s3-cur-bucket-370137681206
 - Chuẩn security:
 https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-pci-controls.html
 https://docs.aws.amazon.com/config/latest/developerguide/conformancepack-sample-templates.html
+
+
+https://dashboard.eventengine.run/login?hash=f1c7-0bc03518f4-35
+Main: https://github.com/awslabs/performance-dashboard-on-aws 
+Installation guide: https://github.com/awslabs/performance-dashboard-on-aws/blob/mainline/docs/installation.md 
+
+region US East N. Virginia (us-east-1) là chính, phần nào cần region khác thì có thể chạy ở region Singapore (ap-southeast-1).
