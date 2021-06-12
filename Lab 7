@@ -1,1 +1,12 @@
 
+2. Các bài lab tuần này:
+- Bài Lab 1: https://www.wellarchitectedlabs.com/cost/200_labs/200_enterprise_dashboards/
+- Bài Lab 2: https://cudos.workshop.aws/ 
+(Github: https://github.com/aws-samples/aws-cudos-framework-deployment)
+Chú ý: Các bài lab tuần này cần chờ dữ liệu CUR (Cost & Usage Report) data từ account test mà TúNA21 sẽ khởi tạo và tạo dữ liệu test, dự kiến anh em có thể làm các bài lab này từ thứ 2, 7/6)
+
+3. Lab mở rộng
+Trong thời gian chờ khởi tạo dữ liệu test cho bài lab tuần này, anh em có thể tiếp tục dùng môi trường lab để thực hành các bài lab trong các tuần trước.
+
+4. Tài khoản lab và hướng dẫn trong file đính kèm.
+https://dashboard.eventengine.run/login?hash=57cc-09f65f2324-a2
