@@ -1,6 +1,21 @@
 
+Link lab:
 https://dashboard.eventengine.run/login?hash=e4d9-0684975264-bf
 https://dashboard.eventengine.run/login?hash=3b21-036346c5f4-c3
 https://dashboard.eventengine.run/login?hash=d4e1-087f92b834-50
 https://dashboard.eventengine.run/login?hash=0b9e-0447dfe324-b4
 https://dashboard.eventengine.run/login?hash=9dbc-0685c92324-2f
+
+devax-s3-cur-bucket-505979536264
+devax-s3-cur-bucket-157448607561
+devax-s3-cur-bucket-542590109561
+devax-s3-cur-bucket-834669103395
+devax-s3-cur-bucket-370137681206
+
+- Bài Lab 1: https://www.wellarchitectedlabs.com/cost/200_labs/200_enterprise_dashboards/
+- Bài Lab 2: https://cudos.workshop.aws/ 
+(Github: https://github.com/aws-samples/aws-cudos-framework-deployment)
+
+- Chuẩn security:
+https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-pci-controls.html
+https://docs.aws.amazon.com/config/latest/developerguide/conformancepack-sample-templates.html
