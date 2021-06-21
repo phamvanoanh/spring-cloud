@@ -23,3 +23,9 @@ aws amplify:
   + dev web
   + track infomation-> save -> analysis web page metric
   
+Lab 1: https://amplify-immersionday.workshop.aws/
+- Riêng phần 5 trong bài lab 1 thì chỉ có thể sử dụng bằng account cá nhân, nên nếu mọi người muốn thử thì có thể tự tạo account cá nhân (miễn phí) hoặc bỏ qua bài lab này nếu dùng lab account trong file đính kèm.
+Lab 2: https://github.com/aws-samples/aws-serverless-airline-booking
+https://dashboard.eventengine.run/login?hash=c983-002bbbd114-ad
+
+
